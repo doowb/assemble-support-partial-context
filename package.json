@@ -1,0 +1,49 @@
+{
+  "name": "partial-context",
+  "description": "The best project ever..",
+  "version": "0.1.0",
+  "homepage": "https://github.com/doowb/partial-context",
+  "author": {
+    "name": "",
+    "url": "http://github.com/doowb/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/doowb/partial-context.git"
+  },
+  "bugs": {
+    "url": "https://github.com/doowb/partial-context/issues"
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "scripts": {
+    "test": "grunt assemble"
+  },
+  "devDependencies": {
+    "assemble": "~0.4.41",
+    "assemble-yaml": "^0.2.1",
+    "globule": "^0.2.0",
+    "grunt": "~0.4.4",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-connect": "~0.8.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "load-grunt-tasks": "~0.6.0",
+    "lodash": "^2.4.1",
+    "time-grunt": "~0.3.2"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/doowb/partial-context/blob/master/LICENSE-MIT"
+    }
+  ],
+  "keywords": [
+    "assemble",
+    "templates",
+    "handlebars",
+    "site generator",
+    "site builder",
+    "grunt"
+  ]
+}

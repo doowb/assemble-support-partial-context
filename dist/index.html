@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home | Partial context</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- Bootstrap theme -->
+    <link href="assets/css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/theme.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    
+<!-- Fixed navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Partial context</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <!-- you can exclude pages using {{#isnt}} helper: {{#isnt data.title 'Blog'}} -->
+        
+        <li>
+          <a href="blog.html">Blog</a>
+        </li>
+        
+        <li class="active">
+          <a href="index.html">Home</a>
+        </li>
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Github <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://github.com/assemble/assemble">Assemble</a></li>
+            <li><a href="https://github.com/assemble/generator-assemble">Generator Assemble</a></li>
+            <li class="divider"></li>
+            <li class="dropdown-header">Plugins</li>
+            
+          </ul>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+
+
+    <div class="container theme-showcase" role="main">
+
+      
+<div class="jumbotron">
+  <h1>Yo, Assemble!</h1>
+  <p>This is a Assemble Generator template using <a href="http://getbootstrap.com">Bootstrap</a>. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+  <p><a href="blog.html" class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+</div>
+
+<!-- BEFORE sgComponent helper -->
+
+<div class="sg-component mobile-one-whole omega">
+  <div class="sg-component__header mobile-one-whole omega">
+    <h2 class="title--xxsmall mobile-two-thirds">Headings</h2>
+    <p class="mobile-one-third mobile-pull-right mobile-text-right">
+      <span class="status-dot status-dot status-dot--yellow">In progress</span>
+    </p>
+  </div>
+  <!-- Markup -->
+  <div class="sg-component__markup mobile-one-whole omega">
+    
+<h1 class="title--huge">This is a huge header</h1>
+<h2 class="title--xlarge">This is a very large header</h2>
+<h3 class="title--large">This is a large header</h3>
+<h4 class="title--medium">This is a moderate header</h4>
+<h5 class="title--small">This is a small header</h5>
+<h6 class="title--xsmall">This is a tiny header</h6>
+    src/templates/documentation/filename.md
+  </div>
+ 
+  <!-- Documentation -->
+  <div class="sg-component__documentation mobile-one-whole omega">
+    
+      <div class="sg-component__tabs" data-module="tabs">
+        <ul class="tablet-wide-container container button--sg-tabs tabs__list" data-module="flexnav" data-moretext="More">
+          
+            <li class="tabs__tab"><a href="#Headings-html">html</a></li>
+          
+            <li class="tabs__tab"><a href="#Headings-css">css</a></li>
+          
+            <li class="tabs__tab"><a href="#Headings-js">js</a></li>
+          
+            <li class="tabs__tab"><a href="#Headings-description">description</a></li>
+          
+            <li class="tabs__tab"><a href="#Headings-links">links</a></li>
+          
+        </ul>
+        
+        <div id="Headings-html" class="tabs__panel">
+          
+<!-- Markup documentation -->
+<pre><code class="language-markup">
+&lt;h1 class=&quot;title--huge&quot;&gt;This is a huge header&lt;/h1&gt;
+&lt;h2 class=&quot;title--xlarge&quot;&gt;This is a very large header&lt;/h2&gt;
+&lt;h3 class=&quot;title--large&quot;&gt;This is a large header&lt;/h3&gt;
+&lt;h4 class=&quot;title--medium&quot;&gt;This is a moderate header&lt;/h4&gt;
+&lt;h5 class=&quot;title--small&quot;&gt;This is a small header&lt;/h5&gt;
+&lt;h6 class=&quot;title--xsmall&quot;&gt;This is a tiny header&lt;/h6&gt;</code></pre>
+
+<!-- // Markup doc. -->
+            
+        </div>
+        
+        <div id="Headings-css" class="tabs__panel">
+          
+            
+<pre><code class="language-markup">&lt;h1&gt;Test content - css&lt;/h1&gt;</code></pre>
+
+            
+          
+        </div>
+        
+        <div id="Headings-js" class="tabs__panel">
+          
+            
+<!-- JavaScript documentation -->
+<h2 id="some-markdown">Some markdown</h2>
+<ul>
+<li>stored</li>
+<li>in</li>
+<li>a</li>
+<li>file</li>
+</ul>
+
+<!-- // JavaScript doc. -->
+            
+          
+        </div>
+        
+        <div id="Headings-description" class="tabs__panel">
+          
+            
+<pre><code class="language-markup">&lt;h1&gt;Test content - description&lt;/h1&gt;</code></pre>
+
+            
+          
+        </div>
+        
+        <div id="Headings-links" class="tabs__panel">
+          
+            
+<pre><code class="language-markup">&lt;h1&gt;Test content - links&lt;/h1&gt;</code></pre>
+
+            
+          
+        </div>
+        
+      </div>
+    
+  <div class="sg-component__expand mobile-one-whole omega">
+    <button class="button button--default button--expand" data-collapse="Collapse" data-expand="Expand">Expand</button>
+  </div>
+  </div>
+</div>
+
+<!-- AFTER sgComponent helper -->
+
+
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
+</html>

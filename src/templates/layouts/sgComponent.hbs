@@ -1,0 +1,54 @@
+<div class="sg-component mobile-one-whole omega">
+  <div class="sg-component__header mobile-one-whole omega">
+    <h2 class="title--xxsmall mobile-two-thirds">{{title}}</h2>
+    <p class="mobile-one-third mobile-pull-right mobile-text-right">
+      <span class="status-dot status-dot status-dot--{{#compare status "==" "Approved"}}green{{else}}{{#compare status "==" "In progress"}}yellow{{else}}blue{{/compare}}{{/compare}}">{{status}}</span>
+    </p>
+  </div>
+  <!-- Markup -->
+  <div class="sg-component__markup mobile-one-whole omega">
+    {{> sgComponentContent}}
+    {{jsDoc}}
+  </div>
+ 
+  <!-- Documentation -->
+  <div class="sg-component__documentation mobile-one-whole omega">
+    {{#if tabs}}
+      <div class="sg-component__tabs" data-module="tabs">
+        <ul class="tablet-wide-container container button--sg-tabs tabs__list" data-module="flexnav" data-moretext="More">
+          {{#each tabs}}
+            <li class="tabs__tab"><a href="#{{hyphenate ../title}}-{{tab}}">{{tab}}</a></li>
+          {{/each}}
+        </ul>
+        {{#each tabs}}
+        <div id="{{hyphenate ../title}}-{{tab}}" class="tabs__panel">
+          {{#compare tab "==" "html"}}
+<!-- Markup documentation -->
+{{#markdown}}
+~~~markup
+{{> sgComponentContent}}
+~~~
+{{/markdown}}
+<!-- // Markup doc. -->
+            {{else}}
+            {{#compare tab "==" "js"}}
+<!-- JavaScript documentation -->
+{{md ../../../jsDoc}}
+<!-- // JavaScript doc. -->
+            {{else}}
+{{#markdown}}
+~~~markup
+<h1>Test content - {{tab}}</h1>
+~~~
+{{/markdown}}
+            {{/compare}}
+          {{/compare}}
+        </div>
+        {{/each}}
+      </div>
+    {{/if}}
+  <div class="sg-component__expand mobile-one-whole omega">
+    <button class="button button--default button--expand" data-collapse="Collapse" data-expand="Expand">Expand</button>
+  </div>
+  </div>
+</div>
